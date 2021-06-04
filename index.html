@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+ <div class="cir">
+   
+ </div>
+ 
+ 
+ <style type="text/css" media="all">
+   .cir{
+   
+     border-radius: 50%;
+     height: 100px;
+     width: 100px;
+     border: 3px solid black;
+   }
+ </style>
+  <script type="text/javascript" charset="utf-8">
+ window.addEventListener('touchstart',function cl(){
+   
+ document.querySelector('.cir').addEventListener('touchstart',function tl(){
+   
+   document.querySelector('.cir').style.backgroundColor = 'yellow';
+   document.querySelector('.cir').style.position = 'absolute';
+   document.querySelector('.cir').style.boxShadow = "0 0 40px black";
+
+   document.querySelector('.cir').addEventListener('touchmove',function al(cv){
+     
+     var left = cv.targetTouches[0].clientX ;
+   var top = cv.targetTouches[0].clientY ;
+ 
+   document.querySelector('.cir').style.transform =  "translate(" + (left-60) + "px"+',' +(top-60) + "px)";
+   
+   });
+   });
+   
+   document.querySelector('.cir').addEventListener('touchend',function sl(){
+     document.querySelector('.cir').style.boxShadow =  "none";;
+     document.querySelector('.cir').style.backgroundColor = 'transparent';
+   });
+ });
+ 
+  </script>
+</body>
+</html>
