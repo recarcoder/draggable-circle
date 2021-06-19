@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+ <div class="cir circle">
+   
+ </div>
+ 
+<h1>touch and move the ball</h1>
+ <style type="text/css" media="all">
+    h1{
+     color:rgba(200,200,200,0.814);
+    }
+   .cir{
+     margin:10px;
+     padding:0;
+     border-radius: 50%;
+     height: 100px;
+     width: 100px;
+     border: 3px solid rgba(200,201,201,0.714);
+     transition: transform 0.05s;
+   }
+ </style>
+  <script type="text/javascript" charset="utf-8">
+
+var circle = document.querySelector('.cir');
+
+ circle.addEventListener('touchstart',function start(ev){
+
+   circle.style.backgroundColor = 'rgba(24,125,237,0.85)';
+   circle.style.position = 'absolute'; 
+   let y = ev.touches[0].clientY-73;
+   let x = ev.touches[0].clientX-73;
+   circle.style.transform = "translate("+x+'px'+","+y+'px'+")";
+});
+   
+ circle.addEventListener('touchmove',function move(cv){
+let y = cv.touches[0].clientY-73;
+   let x = cv.touches[0].clientX-73;
+  document.querySelector('.cir').style.transform ="translate("+x+'px'+','+y+'px'+")";
+});
+
+  
+   
+   
+   document.querySelector('.cir').addEventListener('touchend',function sl(){
+     document.querySelector('.cir').style.boxShadow =  "none";;
+     document.querySelector('.cir').style.backgroundColor = 'transparent';
+   });
+ 
+ 
+  </script>
+</body>
+</html>
