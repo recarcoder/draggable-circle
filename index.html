@@ -36,23 +36,25 @@ var circle = document.querySelector('.cir');
 
    circle.style.backgroundColor = 'rgba(200,125,50,0.85)';
    circle.style.position = 'absolute'; 
-   let y = ev.touches[0].clientY-73;
-   let x = ev.touches[0].clientX-73;
+   let y = ev.touches[0].clientY-70;
+   let x = ev.touches[0].clientX-70;
    circle.style.transform = "translate("+x+'px'+","+y+'px'+")";
 });
    
  circle.addEventListener('touchmove',function move(cv){
-let y = cv.touches[0].clientY-73;
-   let x = cv.touches[0].clientX-73;
+let y = cv.touches[0].clientY-70;
+   let x = cv.touches[0].clientX-70;
   document.querySelector('.cir').style.transform ="translate("+x+'px'+','+y+'px'+")";
 });
 
   
    
    
-   document.querySelector('.cir').addEventListener('touchend',function sl(){
+   document.querySelector('.cir').addEventListener('touchend',function sl(en){
      document.querySelector('.cir').style.boxShadow =  "none";;
      document.querySelector('.cir').style.backgroundColor = 'transparent';
+     let iy = en.touches[0].clientY-70;
+   let ix = en.touches[0].clientX-70;
    });
  
  
