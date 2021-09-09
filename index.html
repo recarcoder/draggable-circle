@@ -20,7 +20,7 @@
    .cir{
      margin:10px;
      padding:0;
-     border-radius: 50%;
+     border-radius:10px;
      height: 100px;
      width: 100px;
      border: 3px solid rgba(200,201,201,0.714);
@@ -55,6 +55,7 @@ let y = cv.touches[0].clientY-70;
      document.querySelector('.cir').style.backgroundColor = 'transparent';
      let iy = en.touches[0].clientY-70;
    let ix = en.touches[0].clientX-70;
+   console.log(iy,ix);
    });
  
  
