@@ -58,7 +58,19 @@ let y = cv.touches[0].clientY-70;
      document.querySelector('.cir').style.backgroundColor = 'transparent';
      let ix = en.changedTouches[0].clientX;
      let iy = en.changedTouches[0].clientY;
+     if(iy < window.visualViewport.height){
+      console.log('iy'); 
+     }
+     else{
+       console.log('iu');
+     }
 
+     if(ix < window.visualViewport.width){
+       console.log('ix');
+     }
+     else{
+      console.log('io');
+     }
   
    console.log(iy);
    });
