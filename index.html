@@ -57,14 +57,14 @@ let y = cv.touches[0].clientY-70;
      document.querySelector('.cir').style.backgroundColor = 'transparent';
      let ix = en.changedTouches[0].clientX;
      let iy = en.changedTouches[0].clientY;
-     if(iy < window.visualViewport.height/2){
-      console.log('iy'); 
+     if(iy <= window.visualViewport.height/2){
+     circle.style.transform = "translate("+20+'px'+")";
      }
       if(iy > window.visualViewport.height/2){
        console.log('iu');
      }
 
-     if(ix < window.visualViewport.width/2){
+     if(ix <= window.visualViewport.width/2){
        console.log('ix');
      }
       if(ix > window.visualViewport.width/2){
