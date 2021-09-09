@@ -62,15 +62,16 @@ let y = cv.touches[0].clientY-70;
      circle.style.transform = "translate(20px,20px)";
      }
      if(iy <= window.visualViewport.height/2 && ix > window.visualViewport.width/2){
-     circle.style.transform = "translate(20px,60vw)";
+     circle.style.transform = "translate(20px,"+caY+"px)";
      }
-     var cat = window.visualViewport.width;
-     console.log(cat);
+     var caX = window.visualViewport.width-70;
+     var caY = window.visualViewport.height-70;
+     
      if(iy > window.visualViewport.height/2 && ix<=window.visualViewport.width/2){
-     circle.style.transform = "translate(80vh,20px)";
+     circle.style.transform = "translate("+caY+"px,20px)";
      }
      if(iy > window.visualViewport.height/2 && ix > window.visualViewport.width/2){
-     circle.style.transform = "translate(80vh,60vw)";
+     circle.style.transform = "translate("+caX+'px,'+caY+"px)";
      }
       
    });
