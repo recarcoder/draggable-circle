@@ -45,8 +45,7 @@ var circle = document.querySelector('.cir');
 let y = cv.touches[0].clientY-70;
    let x = cv.touches[0].clientX-70;
   document.querySelector('.cir').style.transform ="translate("+x+'px'+','+y+'px'+")";
-  console.log(x,y);
-  console.log(window.visualViewport.height);
+
 });
 
   
@@ -58,21 +57,21 @@ let y = cv.touches[0].clientY-70;
      document.querySelector('.cir').style.backgroundColor = 'transparent';
      let ix = en.changedTouches[0].clientX;
      let iy = en.changedTouches[0].clientY;
-     if(iy < window.visualViewport.height){
+     if(iy < window.visualViewport.height/2){
       console.log('iy'); 
      }
-     else{
+      if(iy > window.visualViewport.height/2){
        console.log('iu');
      }
 
-     if(ix < window.visualViewport.width){
+     if(ix < window.visualViewport.width/2){
        console.log('ix');
      }
-     else{
+      if(ix > window.visualViewport.width/2){
       console.log('io');
      }
   
-   console.log(iy);
+ 
    });
  
  
