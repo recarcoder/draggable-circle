@@ -57,6 +57,7 @@ let y = cv.touches[0].clientY-70;
      document.querySelector('.cir').style.backgroundColor = 'transparent';
      let ix = en.changedTouches[0].clientX;
      let iy = en.changedTouches[0].clientY;
+     console.log(ix);
      if(iy <= window.visualViewport.height/2){
      circle.style.transform = "translate("+20+'px'+")";
      }
