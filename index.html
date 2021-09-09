@@ -58,14 +58,15 @@ let y = cv.touches[0].clientY-70;
      let ix = en.changedTouches[0].clientX;
      let iy = en.changedTouches[0].clientY;
      console.log(circle.style);
+     var caX = window.visualViewport.width-70;
+     var caY = window.visualViewport.height-70;
+     
      if(iy <= window.visualViewport.height/2 && ix<=window.visualViewport.width/2){
      circle.style.transform = "translate(20px,20px)";
      }
      if(iy <= window.visualViewport.height/2 && ix > window.visualViewport.width/2){
-     circle.style.transform = "translate("+caX+"px,"+"20px")";
+     circle.style.transform = "translate("+caX+"px,"+"20px)";
      }
-     var caX = window.visualViewport.width-70;
-     var caY = window.visualViewport.height-70;
      
      if(iy > window.visualViewport.height/2 && ix<=window.visualViewport.width/2){
      circle.style.transform = "translate(20px,"+caY+"px)";
