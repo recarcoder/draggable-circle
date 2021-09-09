@@ -53,9 +53,9 @@ let y = cv.touches[0].clientY-70;
    document.querySelector('.cir').addEventListener('touchend',function sl(en){
      document.querySelector('.cir').style.boxShadow =  "none";;
      document.querySelector('.cir').style.backgroundColor = 'transparent';
-     let iy = en.touches[0].clientY-70;
-   let ix = en.touches[0].clientX-70;
-   console.log(iy,ix);
+     let iy = en;
+  
+   console.log(iy);
    });
  
  
